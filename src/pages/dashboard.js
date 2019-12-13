@@ -25,10 +25,10 @@ const Dashboard = ({ location }) => {
 
   return (
     <Layout>
-      <Profile showModal={showModal} />
+      <Profile />
       <Router>
-      <PrivateRoute path="/dashboard/base" component={RouteBase} />
-      <PrivateRoute path="/dashboard/secret" component={RouteSecret} />
+        <PrivateRoute path="/dashboard/base" component={RouteBase} />
+        <PrivateRoute path="/dashboard/secret" component={RouteSecret} />
         <RouteLogin path="/dashboard/login" showModal={showModal} />
       </Router>
       <IdentityModal showDialog={isVisible} onCloseDialog={showModal} />

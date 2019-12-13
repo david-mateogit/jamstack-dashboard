@@ -2,15 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { useIdentityContext } from 'react-netlify-identity';
 
-const Profile = ({ showModal }) => {
-  const identity = useIdentityContext();
-  const isLoggedIn = identity && identity.isLoggedIn;
+const Profile = () => {
+  const { user, logoutUser, isLoggedIn } = useIdentityContext();
 
-  const name =
-    identity &&
-    identity.user &&
-    identity.user.user_metadata &&
-    identity.user.user_metadata.full_name;
+  const name = user && user.user_metadata && user.user_metadata.full_name;
 
   return (
     isLoggedIn && (
@@ -26,7 +21,7 @@ const Profile = ({ showModal }) => {
         <span>
           {' '}
           Logged in as {name}.
-          <button type="button" onClick={showModal}>
+          <button type="button" onClick={() => logoutUser()}>
             log out
           </button>
         </span>
