@@ -4,8 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@reach/dialog": "^0.6.4",
+    "@reach/tabs": "^0.6.4",
+    "@reach/visually-hidden": "^0.6.2",
     "gatsby": "^2.18.11",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-netlify-identity": "^0.1.9",
+    "react-netlify-identity-widget": "^0.2.5"
   }
 }

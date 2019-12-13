@@ -12,7 +12,8 @@ const Dashboard = ({ location }) => {
     if (location.pathname.match(/^\/dashboard\/?$/)) {
       navigate('/dashboard/login', { replace: true });
     }
-  });
+    // eslint-disable-next-line
+  }, []);
   return (
     <Layout>
       <Profile />
